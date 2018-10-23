@@ -18,9 +18,10 @@ namespace Assignment2
         {
             return fn + '\t' + ln + '\t' + ph;
         }
-        public static void LoadDB()
+        public static void LoadDB(string fn, string ln, string ph)
         {
-           // { "Jaarna", "Kereopa", "123-2514"}
+            var LoadingList = new List<string> { "Jaarna", "Kereopa", "123-2514" };
+            // { "Jaarna", "Kereopa", "123-2514"}
         }
     }
 }
