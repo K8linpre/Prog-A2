@@ -33,8 +33,7 @@ namespace Assignment2
                 customer.FName = txtbxFirst.Text;
                 customer.LName = txtBxLast.Text;
                 customer.Phone = txtBxPhone.Text;
-                Program.CustomerList.Add(customer);
-                
+                Program.CustomerList.Add(customer);                
                 lstBx1.Items.Add(Program.CustomerList);
                 customer = new Customer();
                // lstBx1.Items.Add(Customer.GetCustomer(txtbxFirst.Text, txtBxLast.Text, txtBxPhone.Text));
