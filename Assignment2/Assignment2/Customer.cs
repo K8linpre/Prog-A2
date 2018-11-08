@@ -8,20 +8,24 @@ namespace Assignment2
 {
     public class Customer
     {
-
-
+        //Auto-implemented properties for getters and setters
         public string FName { get; set; }
         public string LName { get; set; }
         public string Phone { get; set; }
 
-    public static string GetCustomer(string fn, string ln, string ph)
+        //Constructor
+        public Customer(string fn, string ln, string ph)
         {
-            return fn + '\t' + ln + '\t' + ph;
+            FName = fn;
+            LName = ln;
+            Phone = ph;
         }
-        public static void LoadDB(string fn, string ln, string ph)
+        //Method for GetCustomer
+        public string GetCustomer()
         {
-            var LoadingList = new List<string> { "Jaarna", "Kereopa", "123-2514" };
-            // { "Jaarna", "Kereopa", "123-2514"}
+            return FName + '\t' + LName + '\t' + Phone;
         }
+        //List for the collection of customers in the database
+        public static List<Customer> CustomerDB = new List<Customer>();    
     }
 }
