@@ -35,11 +35,7 @@ namespace Assignment2
                 ClearDisplay();
                 DisplayCustomers();
                 MessageBox.Show("New Customer has been added");
-            }
-
-
-            
-
+            }      
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -117,6 +113,31 @@ namespace Assignment2
         {
             ClearDisplay();
             DisplayCustomers();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (lstBx1.SelectedItems.Count > 0)
+            {
+                if (MessageBox.Show("Are you sure you want to delete this customer?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    ClearBoxes();
+                    ClearDisplay();
+                    DisplayCustomers();
+                    MessageBox.Show("The customer has been deleted");
+                    btnAdd.Enabled = true;
+                }
+                else
+                {
+                    MessageBox.Show("Operation Cancelled");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select a customer to delete");
+                ClearDisplay();
+                DisplayCustomers();
+            }
         }
     }
 }
